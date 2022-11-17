@@ -1,0 +1,51 @@
+* {
+  color: black;
+  /* background-color: rgb(160, 155, 155); */
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  background-color: rgb(160, 155, 155);
+}
+
+h1 {
+  padding: 2rem 3rem;
+}
+
+.row {
+  margin-left: 2rem;
+}
+
+.row-posters {
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 21px;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row-poster {
+  width: 100%;
+  object-fit: contain;
+  max-height: 13rem;
+  transition: transform 200ms;
+  margin-right: 1rem;
+}
+
+.row-poster:hover {
+  transform: scale(1.08);
+}
+
+.large-row {
+  max-height: 23rem;
+}
+
+.large-row:hover {
+  transform: scale(1.09);
+}
