@@ -2,12 +2,13 @@ import './App.css';
 import { Rows } from './components/Rows';
 import requests from './requests';
 import { Featured } from './components/Featured';
+import {Navbar} from './components/Navbar'
 
 function App() {
   
   return (
     <div className="App">
-      <h1>View Party</h1>
+      <Navbar />
       <Featured  />
       <Rows title="Trending Now" getUrl={requests.getTrending} isLargeRow={true} />
       <Rows title="Netflix Originals" getUrl={requests.getNetflixOriginals} />
