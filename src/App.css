@@ -14,16 +14,29 @@
 
 .navbar {
   color: whitesmoke;
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   top: 0;
   width: 100%;
+  /* background-color: rgba(10, 10, 10, 0.8); */
+  padding: 11px;
+  z-index: 1;
+  transition-timing-function: ease-in-out;
+  transition: all 0.3s;
+}
+
+.navbar-black {
+  background-color: rgba(10, 10, 10, 0.8);
 }
 
 .navbar-title {
-  width: 200px;
+  font-family: sans-serif;
+  padding: 0.2rem;
   margin-left: 1rem;
+  background-color: rgb(77, 194, 223);
+  box-shadow: rgb(13, 13, 13);
+  border-radius: 2px;
 }
 
 .row {
