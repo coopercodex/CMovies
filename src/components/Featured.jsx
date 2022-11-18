@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import requests from '../requests';
+import { Link } from 'react-router-dom';
 
 export const Featured = () => {
   const [movies, setMovies] = useState([]);
@@ -15,7 +16,7 @@ export const Featured = () => {
       .then(data => { setMovies(data.results[Math.floor(Math.random() * data.results.length - 1)]) })
       .catch(error => { console.log(error) })
   }
-  // console.log(movies)
+  console.log(movies)
   return (
     <header className='featured'
       style={{
@@ -29,7 +30,7 @@ export const Featured = () => {
         </h1>
       <div className="featured-buttons">
           <button className="featured-button">Play</button>
-          <button className="featured-button-list">My List</button>
+          <Link to='/favorite'><button className="featured-button-list">My List</button></Link>
       </div>
         <h1 className='featured-description'>
           {movies.overview}

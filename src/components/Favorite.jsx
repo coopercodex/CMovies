@@ -1,16 +1,13 @@
-// import React from 'react'
-// import YouTube from 'react-youtube'
+import React from 'react'
+import YouTube from 'react-youtube'
 
-// export const Favorite = () => {
-//   return (
-//   <div>
-//    <button></button>
-//    <YouTube  
-//    autoplay
-//    progress
-//   //  controls
-//   //  src='CtUqyQD37Qs'
-//    />
-//   </div>
-//   )
-// }
+export const Favorite = () => {
+  return (
+  <div className='fav'>
+    <div>
+   <h1 className='fav-title'>Favorites!</h1>
+    </div>
+  </div>
+ 
+  )
+}
