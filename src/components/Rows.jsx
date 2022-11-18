@@ -51,7 +51,6 @@ export const Rows = ({ title, getUrl, isLargeRow, rID }) => {
         ))}
         <IoIosArrowDropright className='slider-icon-right' onClick={handleClickRight}  />
       </div>
-      {/* <IoIosArrowDropleft classname='slider-icon-right' size={40} /> */}
     </div>
    
   )
