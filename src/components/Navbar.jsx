@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import {Routes, Route, Link} from 'react-router-dom'
+import { Favorite } from './Favorite';
 
 export const Navbar = () => {
   const [show, handleShow] = useState(false);
@@ -15,10 +17,12 @@ export const Navbar = () => {
       window.removeEventListener('scroll')
     }
   },[])
-
+ 
   return (
+    <>
     <div className={`navbar ${show && 'navbar-black'}`}>
-      <h1 className='navbar-title'>CMovies</h1>
+      <Link to='/'><h1 className='navbar-title'>CMovies</h1></Link>
     </div>
+    </>
   )
 }

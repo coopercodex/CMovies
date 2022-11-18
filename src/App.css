@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  /* text-decoration: none; */
 }
 
 .App {
@@ -210,4 +211,21 @@ transform: translateY(0%);
 }
 .row:hover .slider-icon-right {
   opacity: .6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.fav {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(13, 13, 13, 0.7);
+}
+
+.fav-title {
+  margin-top: 150%;
+  align-self: center; 
+  color: whitesmoke;
+  border: 1px solid pink;
 }
