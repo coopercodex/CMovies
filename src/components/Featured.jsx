@@ -29,7 +29,7 @@ export const Featured = () => {
         </h1>
       <div className="featured-buttons">
           <button className="featured-button">Play</button>
-          <button className="featured-button">My List</button>
+          <button className="featured-button-list">My List</button>
       </div>
         <h1 className='featured-description'>
           {movies.overview}
