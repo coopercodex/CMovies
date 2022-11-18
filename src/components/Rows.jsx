@@ -8,15 +8,15 @@ export const Rows = ({ title, getUrl, isLargeRow, rID }) => {
   const baseUrl = "https://image.tmdb.org/t/p/original";
   
 
-  const handleClickLeft = () => {
-   let slider = document.getElementById('row' + rID);
-   slider.scrollLeft = slider.scrollLeft - 500;
-  }
+  // const handleClickLeft = () => {
+  //  let slider = document.getElementById('row' + rID);
+  //  slider.scrollLeft = slider.scrollLeft - 500;
+  // }
 
-  const handleClickRight = () => {
-    let slider = document.getElementById('row' + rID);
-    slider.scrollLeft = slider.scrollLeft + 500;
-   }
+  // const handleClickRight = () => {
+  //   let slider = document.getElementById('row' + rID);
+  //   slider.scrollLeft = slider.scrollLeft + 500;
+  //  }
 
   useEffect(() => {
     getData()
@@ -35,8 +35,8 @@ export const Rows = ({ title, getUrl, isLargeRow, rID }) => {
    
     <div className='row'>
       <h2>{title}</h2>
-      <div className='row-posters' id={'row'+ rID}>
-        <IoIosArrowDropleft className='slider-icon-left' onClick={handleClickLeft} />
+      <div className='row-posters' >
+        {/* <IoIosArrowDropleft className='slider-icon-left' onClick={handleClickLeft} /> */}
         {movies.map((movie, index) => (
           <div className={`row-poster ${isLargeRow && "large-row"}`}>
             <img 
@@ -49,7 +49,7 @@ export const Rows = ({ title, getUrl, isLargeRow, rID }) => {
             </div>   
             </div>
         ))}
-        <IoIosArrowDropright className='slider-icon-right' onClick={handleClickRight}  />
+        {/* <IoIosArrowDropright className='slider-icon-right' onClick={handleClickRight}  /> */}
       </div>
     </div>
    
