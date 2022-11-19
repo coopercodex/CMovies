@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   /* text-decoration: none; */
+  /* background-color: rgba(13, 13, 13, 0.7); */
 }
 
 .App {
@@ -224,7 +225,8 @@ a {
 }
 
 .fav-title {
-  margin-top: 150%;
+  text-align: center;
+  margin-top: 25px;
   align-self: center; 
   color: whitesmoke;
   border: 1px solid pink;
