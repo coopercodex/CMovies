@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-
 import {IoIosArrowDropright, IoIosArrowDropleft} from 'react-icons/io'
+import { Favorite } from './Favorite'
+import { Route, Routes } from 'react-router-dom'
+import { Searchbar } from './Searchbar';
 
 export const Rows = ({ title, getUrl, isLargeRow, rID }) => {
   const [movies, setMovies] = useState([]);
@@ -32,7 +34,7 @@ export const Rows = ({ title, getUrl, isLargeRow, rID }) => {
 
   // console.table(movies[0].poster_path)
   return (
-   
+   <>
     <div className='row'>
       <h2>{title}</h2>
       <div className='row-posters' >
@@ -52,6 +54,6 @@ export const Rows = ({ title, getUrl, isLargeRow, rID }) => {
         {/* <IoIosArrowDropright className='slider-icon-right' onClick={handleClickRight}  /> */}
       </div>
     </div>
-   
+   </>
   )
 }
