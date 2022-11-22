@@ -1,9 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { GlobalContext } from '../context/GlobalState'
+import {MdAddCircle} from 'react-icons/md'
 import requests from '../requests'
-export const Searchbar = () => {
+
+export const Searchbar = ({ movie }) => {
   const [search, setSearch] = useState('')
   const [results, setResults] = useState([]);
   const baseUrl = "https://image.tmdb.org/t/p/original";
+
+  const { addMovieToWatchList, watchlist } = useContext(GlobalContext)
+  // const isClicked = true
+
+  // const storedMovie = (event) => {
+  //  event.currentTarget.disabled = true;
+  // }  
+
+  // console.log(movie)
+  // const disableWatchList = storedMovie ? true : false;
+
   const handleChange = (event) => {
     event.preventDefault();
     setSearch(event.target.value)
@@ -19,7 +33,10 @@ export const Searchbar = () => {
       })
   }
 
-  console.log("res", results)
+  const handleClick = (event, movie) => {
+    addMovieToWatchList(movie)
+    event.currentTarget.disabled = true
+  }
   return (
 
     <div className='search'>
@@ -32,21 +49,21 @@ export const Searchbar = () => {
       {results.length > 0 && (
         <ul className='res'>
           {results.map((movie) => (
-            <li className='list-item'>
-            {movie.poster_path &&
-              <img src={`${baseUrl}${movie?.poster_path}` || `${baseUrl}${movie?.backdrop_path}`} />
-            }
-            <div>
-            <h3>{movie?.title}</h3>
-            <p>{movie.release_date ? movie.release_date.slice(0,4) : 'No Info'}
-            <button className='sbutton'>Add</button>
-            </p>
-            </div>
+            <li className='list-item' key={movie?.id}>
+              {movie.poster_path &&
+                <img key={movie.id} src={`${baseUrl}${movie?.poster_path}` || `${baseUrl}${movie?.backdrop_path}`} />
+              }
+              <div>
+                <h3>{movie?.title}</h3>
+                <p>{movie.release_date ? movie.release_date.slice(0, 4) : 'No Info'}
+                <h4>Add to List? <MdAddCircle onClick={() => addMovieToWatchList(movie)} /> </h4>
+                </p>
+              </div>
             </li>
           ))}
         </ul>
       )}
-      </div>
+    </div>
 
   )
 }
