@@ -236,20 +236,42 @@ a {
   color: inherit;
 }
 
-.fav {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  background-color: rgba(13, 13, 13, 0.7);
+.favorite {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  padding-top: 4rem;
+ /* display: flex; */
+  /* flex-direction: row;  */
+  /* justify-content: center; */
+  background-color: rgba(13, 13, 13, 1);
 }
 
-.fav-title {
+.favorite-title {
+  font-size: xx-large;
   text-align: center;
-  margin-top: 25px;
-  align-self: center;
+  margin-top: 15px;
+  /* align-self: center; */
   color: whitesmoke;
-  border: 1px solid pink;
 }
+
+.row-posters-favorite {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+ overflow-y: hidden;
+  overflow-x: scroll; 
+  padding: 21px;
+}
+
+.row-posters-favortie::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
 
 .search {
   position: absolute;
@@ -305,7 +327,7 @@ input:hover {
 
 .list-item img {
   /* padding-top: 2px; */
-  padding: 2px;
+  padding: 3px;
   /* right: 0; */
   height: 5rem;
   width: 5rem;
