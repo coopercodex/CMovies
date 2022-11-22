@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {Routes, Route, Link} from 'react-router-dom'
-import { Favorite } from './Favorite';
+import { Link } from 'react-router-dom'
 import { Searchbar } from './Searchbar';
 
 export const Navbar = () => {
@@ -9,7 +8,7 @@ export const Navbar = () => {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
-        handleShow(true); 
+        handleShow(true);
       } else {
         handleShow(false)
       }
@@ -17,14 +16,15 @@ export const Navbar = () => {
     return () => {
       window.removeEventListener('scroll')
     }
-  },[])
- 
+  }, [])
+
   return (
     <>
-    <div className={`navbar ${show && 'navbar-black'}`}>
-      <Link to='/'><h1 className='navbar-title'>CMovies</h1></Link>
-      <div className='searchbar'><Searchbar /></div>
-    </div>
+      <div className={`navbar ${show && 'navbar-black'}`}>
+        <Link to='/'><h1 className='navbar-title'>CMovies</h1></Link>
+        <Link to='/' className="home-button">Home</Link>
+        <div className='searchbar'><Searchbar /></div>
+      </div>
     </>
   )
 }

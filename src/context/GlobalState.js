@@ -1,5 +1,4 @@
-import React, { createContext, useReducer, useEffect } from 'react'
-import { json } from 'react-router-dom';
+import React, { createContext, useReducer, useEffect } from 'react';
 import AppReducer from './AppReducer';
 
 const initialState = {
