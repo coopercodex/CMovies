@@ -7,7 +7,6 @@ export const Featured = () => {
 
   useEffect(() => {
     getData()
-
   }, [])
 
   const getData = async () => {
@@ -16,7 +15,7 @@ export const Featured = () => {
       .then(data => { setMovies(data.results[Math.floor(Math.random() * data.results.length - 1)]) })
       .catch(error => { console.log(error) })
   }
-  console.log(movies)
+
   return (
     <header className='featured'
       style={{
@@ -28,15 +27,15 @@ export const Featured = () => {
         <h1 className='featured-title'>
           {movies?.title || movies?.name || movies?.original_name}
         </h1>
-      <div className="featured-buttons">
-          <button className="featured-button">Play</button>
+        <div className="featured-buttons">
+          <Link target="_blank" rel="noreferrer" to='//www.youtube.com/results?search_query=movie+trailers+2022' className="featured-button">Play</Link>
           <Link to='/favorite'><button className="featured-button-list">My List</button></Link>
-      </div>
+        </div>
         <h1 className='featured-description'>
           {movies.overview}
         </h1>
       </div>
-      <div className='fade-bottom'/>
+      <div className='fade-bottom' />
 
     </header>
   )

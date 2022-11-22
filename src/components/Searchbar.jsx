@@ -9,14 +9,6 @@ export const Searchbar = ({ movie }) => {
   const baseUrl = "https://image.tmdb.org/t/p/original";
 
   const { addMovieToWatchList, watchlist } = useContext(GlobalContext)
-  // const isClicked = true
-
-  // const storedMovie = (event) => {
-  //  event.currentTarget.disabled = true;
-  // }  
-
-  // console.log(movie)
-  // const disableWatchList = storedMovie ? true : false;
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -33,10 +25,6 @@ export const Searchbar = ({ movie }) => {
       })
   }
 
-  const handleClick = (event, movie) => {
-    addMovieToWatchList(movie)
-    event.currentTarget.disabled = true
-  }
   return (
 
     <div className='search'>
