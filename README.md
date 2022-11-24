@@ -16,7 +16,7 @@
 
   ## Introduction
 
-   This project was a solo project that I completed in while learning React! This project was a great learning experience as i got to implement complex logic to create a fully functional application.
+   This project was a solo project that I completed while learning React! This project was a great learning experience as i got to implement some really good logic to create a fully functional application.
 
   ## Technologies
 
