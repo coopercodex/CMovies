@@ -8,13 +8,14 @@ export const Searchbar = ({ movie }) => {
   const [results, setResults] = useState([]);
   const baseUrl = "https://image.tmdb.org/t/p/original";
 
+
   const { addMovieToWatchList, watchlist } = useContext(GlobalContext)
 
   const handleChange = (event) => {
     event.preventDefault();
     setSearch(event.target.value)
 
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=b558000a72a27464bb4bdad6fff63ac2&language=en-US&page=1&include_adult=false&query=${event.target.value}`)
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1&include_adult=false&query=${event.target.value}`)
       .then((response) => response.json())
       .then((data) => {
         if (!data.errors) {
@@ -26,7 +27,6 @@ export const Searchbar = ({ movie }) => {
   }
 
   return (
-
     <div className='search'>
       <input
         type='text'

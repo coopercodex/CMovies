@@ -7,10 +7,15 @@ import { Routes, Route } from 'react-router-dom'
 import { Favorite } from './components/Favorite';
 
 import {GlobalProvider} from './context/GlobalState'
+import Login from './components/Login';
 function App() {
+  const user = null;
 
   return (
     <GlobalProvider>
+    {user ? (
+      <Login />
+    ) : (
     <>
       <div className="App">
         <Navbar />
@@ -30,12 +35,11 @@ function App() {
           } />
         </Routes>
       </div>
-      
         <Routes>
           <Route path='/favorite' element={<Favorite isLargeRow={true} />} />
         </Routes>
-       
         </>
+        )}
   </GlobalProvider>
   );
 }
