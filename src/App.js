@@ -6,14 +6,13 @@ import { Navbar } from './components/Navbar'
 import { Routes, Route } from 'react-router-dom'
 import { Favorite } from './components/Favorite';
 
-import {GlobalProvider} from './context/GlobalState'
 import Login from './components/Login';
 function App() {
   const user = null;
 
   return (
-    <GlobalProvider>
-    {user ? (
+    <>
+    {!user ? (
       <Login />
     ) : (
     <>
@@ -40,7 +39,7 @@ function App() {
         </Routes>
         </>
         )}
-  </GlobalProvider>
+  </>
   );
 }
 
