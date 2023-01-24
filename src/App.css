@@ -21,6 +21,15 @@
   transition: all 0.3s;
 }
 
+.navbar-avatar {
+  position: fixed;
+  right: 25px;
+  width: 40px;
+  margin-top: -22px;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
 .navbar-black {
   background-color: rgba(10, 10, 10, 0.8);
 }
@@ -40,7 +49,7 @@
   color: whitesmoke;
 }
 
-.home-button:hover{
+.home-button:hover {
   text-decoration: none;
   color: rgb(77, 194, 223);
 }
@@ -247,8 +256,8 @@ a {
   overflow: hidden;
   display: flex;
   flex-direction: row;
- overflow-y: hidden;
-  overflow-x: scroll; 
+  overflow-y: hidden;
+  overflow-x: scroll;
   padding: 21px;
 }
 
@@ -274,7 +283,7 @@ a {
   background-color: rgba(211, 208, 208, 0.8)
 }
 
-.search > input {
+.search>input {
   color: whitesmoke;
   font-size: large;
   font-weight: 600;
@@ -289,7 +298,7 @@ a {
   outline: 0;
 }
 
-.search > input:hover {
+.search>input:hover {
   color: rgb(31, 31, 31);
 }
 
@@ -345,7 +354,7 @@ a {
   top: 21px;
   padding: 10px 20px;
   font-size: 1rem;
-  color:rgb(246, 243, 243);
+  color: rgb(246, 243, 243);
   background-color: rgb(77, 194, 223);
   font-weight: 600;
   border: none;
@@ -357,12 +366,12 @@ a {
   z-index: 1;
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
-  background-image: linear-gradient( to top, 
-  rgba(0, 0, 0, 0.8) 0,
-  rgba(0, 0, 0, 0) 60%,
-  rgba(0, 0, 0, 0.8) 100%
-  );
+  background-image: linear-gradient(to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 100%);
 }
+
 .login-body {
   position: absolute;
   top: 30%;
@@ -370,23 +379,24 @@ a {
   margin-right: auto;
   text-align: center;
   z-index: 1;
-  color:rgb(246, 243, 243);
+  color: rgb(246, 243, 243);
   padding: 20px;
   left: 0;
   right: 0;
 }
-.login-body > h1 {
+
+.login-body>h1 {
   font-size: 3.124rem;
   margin-bottom: 20px;
 }
 
-.login-body > h2 {
+.login-body>h2 {
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 30px;
 }
 
-.login-input > form > input {
+.login-input>form>input {
   padding: 10px;
   outline-width: 0;
   height: 30px;
@@ -398,7 +408,7 @@ a {
 .login-getStarted {
   padding: 16px 20px;
   font-size: 1rem;
-  color:rgb(246, 243, 243);
+  color: rgb(246, 243, 243);
   background-color: rgb(77, 194, 223);
   border: none;
   font-weight: 600;
@@ -417,12 +427,12 @@ a {
   background: rgba(0, 0, 0, 0.85)
 }
 
-.signIn-screen > form {
+.signIn-screen>form {
   display: grid;
   flex-direction: column;
 }
 
-.signIn-screen > form > input {
+.signIn-screen>form>input {
   margin-bottom: 15px;
   outline-width: 0;
   border-radius: 5px;
@@ -431,7 +441,7 @@ a {
   padding: 5px 15px;
 }
 
-.signIn-screen > form > button {
+.signIn-screen>form>button {
   color: rgb(246, 243, 243);
   border-radius: 5px;
   font-size: 1rem;
@@ -443,12 +453,12 @@ a {
   margin-top: 20px;
 }
 
-.signIn-screen > form > h1 {
+.signIn-screen>form>h1 {
   text-align: left;
   margin-bottom: 20px;
 }
 
-.signIn-screen > form > h4 {
+.signIn-screen>form>h4 {
   text-align: left;
   margin-top: 30px;
 }
@@ -456,7 +466,76 @@ a {
 .signIn-gray {
   color: gray;
 }
+
 .signIn-link:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.profile-screen {
+  height: 100vh;
+  color: rgb(246, 243, 243);
+  background-color: black;
+}
+
+.profile-body {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8%;
+  max-width: 800px;
+}
+
+.profile-info {
+  display: flex;
+}
+
+.profile-body>h1 {
+  font-size: 60px;
+  font-weight: 400;
+  border-bottom: 1px solid rgb(24, 24, 57);
+  margin-bottom: 20px;
+}
+
+.profile-info>img {
+  height: 100px;
+  width: 100px;
+}
+
+.profile-details {
+  color: rgb(246, 243, 243);
+  margin-left: 25px;
+  flex: 1;
+
+}
+
+.profile-details>h2 {
+  background-color: gray;
+  padding: 15px;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.profile-signOut {
+  padding: 10px 20px;
+  font-size: 23px;
+  width: 50%;
+  margin-top: 5%;
+  color: rgb(246, 243, 243);
+  background-color: rgb(77, 194, 223);
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+}
+
+.profile-plans {
+  margin-top: 20px;
+}
+
+.profile-plans>h3 {
+  border-bottom: 1px solid rgb(24, 24, 57);
+  padding-bottom: 10px;
+
 }
