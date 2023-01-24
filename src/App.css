@@ -24,8 +24,8 @@
 .navbar-avatar {
   position: fixed;
   right: 25px;
-  width: 40px;
-  margin-top: -22px;
+  width: 55px;
+  margin-top: -28px;
   padding: 0.2rem;
   cursor: pointer;
 }
@@ -44,6 +44,7 @@
 }
 
 .home-button {
+  font-size: large;
   height: min-content;
   background-color: inherit;
   color: whitesmoke;
@@ -537,5 +538,30 @@ a {
 .profile-plans>h3 {
   border-bottom: 1px solid rgb(24, 24, 57);
   padding-bottom: 10px;
+}
 
+.plansPage-plan {
+  font-size: x-large;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  opacity: 0.8;
+}
+
+.plansPage-plan:hover {
+  opacity: 1;
+}
+
+.plansPage-plan > button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(77, 194, 223);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.message {
+  margin-top: 25px;
 }

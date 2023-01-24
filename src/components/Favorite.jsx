@@ -31,7 +31,7 @@ export const Favorite = ({ isLargeRow }) => {
             <div id={'row'} className='row-posters-favorite' >
               <IoIosArrowDropleft className='slider-icon-left' onClick={handleClickLeft} />
               {items.map((movie, index) => (
-                <div className={`row-poster ${isLargeRow && "large-row"}`}>
+                <div key={index} className={`row-poster ${isLargeRow && "large-row"}`}>
                   <img
                     src={`${baseUrl}${isLargeRow ? movie?.poster_path : movie?.backdrop_path}`}
                     key={movie.id} alt={movie.name} />

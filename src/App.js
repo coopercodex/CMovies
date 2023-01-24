@@ -32,8 +32,7 @@ function App() {
     })
     return unsubscribe;
   }, [dispatch])
-  // derekcooper20@gmail.com
-// 
+ 
   return (
     <>
       {!user ? (

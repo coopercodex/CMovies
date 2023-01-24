@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { getAuth, signOut } from "firebase/auth";
 import { selectUser } from './redux/userSlice'
 import { auth } from '../firebase';
+import { Plans } from './Plans';
 
 export const Profile = () => {
   const user = useSelector(selectUser)
@@ -26,6 +27,7 @@ export const Profile = () => {
             <h2>{user.email}</h2>
             <div className='profile-plans'>
               <h3>Plans</h3>
+              <Plans />
               <button onClick={() => auth.signOut()} className='profile-signOut'>Sign Out</button>
             </div>
           </div>

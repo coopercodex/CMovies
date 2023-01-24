@@ -1,7 +1,5 @@
-import userEvent from '@testing-library/user-event';
 import React from 'react'
-import { useRef } from 'react';
-import  {auth}  from '../firebase';
+import { useRef } from 'react'
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from 'firebase/auth';
 
 function SignIn() {
@@ -13,8 +11,6 @@ function SignIn() {
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
     .then((userCredential) => {
-      const user = userCredential.user;
-      // console.log(user)
     })
     .catch((err) => {
       alert(err.message);
@@ -26,8 +22,6 @@ function SignIn() {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
   .then((userCredential) => {
-    const user = userCredential.user;
-    console.log(user)
   })
   .catch((err) => {
     alert(err.message);
@@ -38,12 +32,13 @@ function SignIn() {
     <div className='signIn-screen'>
       <form>
         <h1>Sign In</h1>
-        <input ref={emailRef} placeholder='Email' type='email' />
-        <input ref={passwordRef} placeholder='Password' type='password' />
+        <input ref={emailRef} placeholder='abc@gmail.com' type='email' />
+        <input ref={passwordRef} placeholder='abc123' type='password' />
         <button type='submit' onClick={signIn}>Sign In</button>
         <h4>
           <span className='signIn-gray'>New to CmMovies? </span>
-          <span className='signIn-link' onClick={register}>Sign Up Now</span>
+          <span className='signIn-link' onClick={register}>Sign Up Now</span> 
+          <h3 className='message'>(Any fake gmail and password will work)</h3>
         </h4>
       </form>
     </div>
