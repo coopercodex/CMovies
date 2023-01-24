@@ -16,7 +16,8 @@
 
   ## Introduction
 
-   This project was a solo project that I completed while learning React! This project was a great learning experience as i got to implement some really good logic to create a fully functional application.
+   This project was a solo project that I completed while learning React! This project was a great learning experience as I got to implement some really good logic to create a fully functional application. Login through Firebase Authentication and explore!
+
 
   ## Technologies
 
@@ -26,13 +27,15 @@
   - CSS
   - Router V6
   - XML
-  - Context
+  - Redux
+  - Firebase
+  - Stripe
 
 
   ## Features
 
-  This application fetches movie data from an api and displays the data in organized rows.  This application allows users to search, add, and remove movies they're interested in to a watch list that saves those choices in local storage.
-
+  This application fetches movie data from an api and displays the data in organized rows. Once a user logs in this application allows users to search, add, and remove movies they're interested in to a watch list that saves those choices to a redux store. This application also uses Stripe checkout to allow users to purchase a 3 tier subscription plan.
+ 
   ## Page Demo
 
 
