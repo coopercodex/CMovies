@@ -7,10 +7,12 @@ import { async } from '@firebase/util';
 import { useSelector } from 'react-redux';
 import { selectUser } from './redux/userSlice';
 import { loadStripe } from '@stripe/stripe-js';
+import ReactLoading from 'react-loading';
 
 export const Plans = () => {
   const [products, setProducts] = useState([])
   const user = useSelector(selectUser)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     const q = query(collection(db, "products"), where("active", "==", true));
@@ -33,6 +35,10 @@ export const Plans = () => {
   }, []);
 
   const loadCheckout = async (priceId) => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false)
+    },2600)
     const docRef = await addDoc(
       collection(db, "customers", user.uid, "checkout_sessions"),
       {
@@ -54,7 +60,7 @@ export const Plans = () => {
     })
   }
 
-  return ( 
+  return (!loading) ? (
     <div className='plans-page'>
       {Object.entries(products).map(([productId, productData]) => {
         return (
@@ -68,5 +74,5 @@ export const Plans = () => {
         )
       })}
     </div>
-  ) 
+  ) : <div style={{ position: 'relative', zIndex: 1 }} ><ReactLoading type={'cylon'} color={'rgb(77, 194, 223)'} height={'40%'} width={'45%'} /> <h1 style={{marginTop: -75, color: 'rgb(77, 194, 223)', fontSize: 45 }}>Redirecting to Stripe</h1></div> 
 }
