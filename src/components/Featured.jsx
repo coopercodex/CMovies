@@ -32,7 +32,7 @@ export const Featured = () => {
           <Link to='/favorite'><button className="featured-button-list">My List</button></Link>
         </div>
         <h1 className='featured-description'>
-          {movies.overview}
+          {movies?.overview}
         </h1>
       </div>
       <div className='fade-bottom' />
