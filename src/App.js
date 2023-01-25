@@ -11,8 +11,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './components/redux/userSlice';
 import { Profile } from './components/Profile';
-
-
+import { MovieDetails } from './components/MovieDetails';
 
 function App() {
   const user = useSelector(selectUser);
@@ -51,7 +50,7 @@ function App() {
                   <Rows title="Action" getUrl={requests.getActionMovies} rID={4} />
                   <Rows title="Comedy" getUrl={requests.getComedyMovies} rID={5} />
                   <Rows title="Horror" getUrl={requests.getHorrorMovies} rID={6} />
-                  <Rows title="Romance" getUrl={requests.getRomanceMovies} rID={7} />
+                  <Rows title="Fantasy" getUrl={requests.getRomanceMovies} rID={7} />
                   <Rows title="Documentaries" getUrl={requests.getDocumentaries} rID={8} />
                 </>
               } />
@@ -60,6 +59,7 @@ function App() {
           <Routes>
             <Route path='/favorite' element={<Favorite isLargeRow={true} />} />
             <Route path='/profile' element={<Profile />} />
+            <Route path='/movieDetails/:cardId' element={<MovieDetails /> } />
           </Routes>
         </>
       )}
