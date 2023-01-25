@@ -46,7 +46,7 @@
 .home-button {
   font-size: large;
   height: min-content;
-  background-color: inherit;
+  /* background-color: inherit; */
   color: whitesmoke;
 }
 
