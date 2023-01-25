@@ -4,6 +4,7 @@ import { MdAddCircle } from 'react-icons/md'
 import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons/io'
 import { useDispatch } from 'react-redux';
 import { addToFavorite } from './redux/favoriteSlice';
+import { Link } from 'react-router-dom';
 
 export const Rows = ({ title, getUrl, isLargeRow, rID }) => {
   const [movies, setMovies] = useState([]);
@@ -45,9 +46,11 @@ export const Rows = ({ title, getUrl, isLargeRow, rID }) => {
                 src={`${baseUrl}${isLargeRow ? movie?.poster_path : movie?.backdrop_path }`}
                 key={movie?.id} alt={movie?.name} />
               <div className='row-info'>
+              <Link to={`/movieDetails/${movie?.id}`} state={{movie}}>
                 <h4>{movie?.title || movie?.name || movie?.original_name}</h4><br />
                 <h4>Add to List? <MdAddCircle onClick={() => dispatch(addToFavorite(movie))} /> </h4>
                 <p >{movie?.overview}</p>
+                </Link>
               </div>
             </div>
           ))}
