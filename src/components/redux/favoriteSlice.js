@@ -9,7 +9,10 @@ export const favoriteSlice = createSlice({
   initialState,
   reducers: {
     addToFavorite: (state, action) => {
-      state.movies.push(action.payload)
+      const item = state.movies.find((movie) => movie.id === action.payload.id)
+      if (!item) {
+        state.movies.push(action.payload)
+      } 
     },
     removeFromWatchList: (state, action) => {
       state.movies = state.movies.filter(item => item.id !== action.payload)

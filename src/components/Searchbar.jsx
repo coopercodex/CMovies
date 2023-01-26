@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import { useEffect } from 'react'
 import {MdAddCircle} from 'react-icons/md'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { addToFavorite } from './redux/favoriteSlice'
+
 
 export const Searchbar = () => {
   const [search, setSearch] = useState('')
@@ -23,6 +26,10 @@ export const Searchbar = () => {
         }
       })
   }
+  const refresh = () => {
+    setSearch('')
+    setResults([])
+  }
 
   return (
     <div className='search'>
@@ -36,13 +43,15 @@ export const Searchbar = () => {
         <ul className='res'>
           {results.map((movie) => (
             <li className='list-item' key={movie?.id}>
+              <Link to={`/movieDetails/${movie?.id}`} state={{movie}} onClick={() => refresh()} >
               {movie.poster_path &&
                 <img key={movie.id} src={`${baseUrl}${movie?.poster_path}` || `${baseUrl}${movie?.backdrop_path}`} alt='movie poster' />
               }
+              </Link>
               <div>
                 <h3>{movie?.title}</h3>
                 <p>{movie.release_date ? movie.release_date.slice(0, 4) : 'No Info'}
-                <h4>Add to List? <MdAddCircle onClick={() => dispatch(addToFavorite(movie))} /> </h4>
+                <h4>Add to List? <MdAddCircle className='Add-fav' onClick={() => dispatch(addToFavorite(movie))} /> </h4>
                 </p>
               </div>
             </li>

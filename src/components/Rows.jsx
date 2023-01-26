@@ -49,7 +49,7 @@ export const Rows = ({ title, getUrl, isLargeRow, rID }) => {
               <Link to={`/movieDetails/${movie?.id}`} state={{movie}}>
                 <h4>{movie?.title || movie?.name || movie?.original_name}</h4><br />
                 </Link>
-                <h4>Add to List? <MdAddCircle onClick={() => dispatch(addToFavorite(movie))} /> </h4>
+                <h4>Add to List? <MdAddCircle className='Add-fav' onClick={() => dispatch(addToFavorite(movie))} /> </h4>
                 <Link to={`/movieDetails/${movie?.id}`} state={{movie}}>
                 <p >{movie?.overview}</p>
                 </Link>
