@@ -38,7 +38,7 @@ function SignIn() {
         <h4>
           <span className='signIn-gray'>New to CmMovies? </span>
           <span className='signIn-link' onClick={register}>Sign Up Now</span> 
-          <h3 className='message'>(Any fake gmail and password will work)</h3>
+          <h3 className='message' >(Use sign in inside the input field or any fake gmail and password will work!)</h3>
         </h4>
       </form>
     </div>
