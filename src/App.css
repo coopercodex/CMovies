@@ -376,8 +376,9 @@ a {
 }
 
 .login-body {
-  position: absolute;
-  top: 30%;
+  max-height: 100vh;
+  position: absolute; 
+  top: 10%; 
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -476,7 +477,7 @@ a {
 }
 
 .profile-screen {
-  height: 100vh;
+  min-height: 100vh;
   color: rgb(246, 243, 243);
   background-color: black;
 }
