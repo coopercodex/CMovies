@@ -85,6 +85,8 @@
   max-height: 11rem;
   transition: transform 200ms;
   margin-right: 1rem;
+  border-radius: 7px;
+  border: 1px solid rgb(30, 30, 30);
 }
 
 
@@ -268,7 +270,7 @@ a {
 
 .search {
   position: absolute;
-  max-height: 25rem;
+  max-height: 28rem;
   overflow: auto;
   max-width: 25%;
   border-radius: 22.5px;
@@ -314,9 +316,9 @@ a {
 }
 
 .list-item img {
-  padding: 3px;
-  height: 5rem;
-  width: 5rem;
+  padding: 10px;
+  height: 4rem;
+  width: 4rem;
 }
 
 .list-item {
@@ -552,7 +554,7 @@ a {
   opacity: 1;
 }
 
-.plansPage-plan > button {
+.plansPage-plan>button {
   padding: 10px 20px;
   font-size: 1rem;
   color: white;
@@ -567,25 +569,92 @@ a {
 }
 
 .movie-details {
-    /* height: 100vh; */
-    color: rgb(246, 243, 243);
-    background-color: rgb(13, 13, 13);
-    min-width: max-content; 
-    max-height: min-content;
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  color: rgb(246, 243, 243);
+  background-color: rgb(13, 13, 13);
+  min-width: min-content;
+  min-height: 100vh;
 }
 
 .movie-details-body {
   display: flex;
-  flex-direction: column;
   /* width: 50%; */
   /* margin-left: auto;
-  margin-right: auto; */
-  /* /* padding: 8%; */
+  margin-right: auto;  */
+  /* padding: 8%;  */
   /* max-width: 800px;  */
 }
 
 .movie-info {
-  margin-top: 15%;
+  margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.video-title {
+  margin-bottom: 10px;
+  color: rgb(210, 205, 205);
+}
+
+.video-title>a:hover {
+  text-decoration: none;
+  color: rgb(77, 194, 223);
+}
+
+.movie-description {
+  margin: 7rem;
+  display: flex;
+  flex-direction: row;
+  max-width: 75%;
+}
+
+.movie-description > img {
+  border: 1px solid rgb(49, 47, 47);
+  border-radius: 5px;
+}
+
+.movie-description-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  padding: 2px;
+}
+.movie-description-details p {
+  margin: 5px 0px;
+}
+.movie-description-tag {
+  color: rgb(158, 155, 155);
+  line-height: 1.6rem;
+  margin-top: 15px;
+}
+
+.movie-description-tag span {
+  font-size: small;
+  color: black;
+  background-color: rgb(77, 194, 223);
+  border-radius: 2px;
+  padding: 2px 5px;
+}
+
+.Add-fav:hover {
+  color:  rgb(77, 194, 223);
+  cursor: pointer;
+}
+
+.remove-fav:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.Add-fav-details {
+  position: absolute;
+  margin-left: -3.2rem;
+  margin-top: .2rem;
+}
+
+.Add-fav-details:hover {
+  color:  rgb(77, 194, 223);
+  cursor: pointer;
 }
