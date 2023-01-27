@@ -26,7 +26,6 @@
   - HTML
   - CSS
   - Router V6
-  - XML
   - Redux
   - Firebase
   - Stripe
