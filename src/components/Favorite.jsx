@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { removeFromWatchList, selectItems } from './redux/favoriteSlice';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import './favorite.css'
 
 export const Favorite = ({ isLargeRow }) => {
   const items = useSelector(selectItems)

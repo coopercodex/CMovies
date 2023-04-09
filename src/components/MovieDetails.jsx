@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { MdAddCircle } from 'react-icons/md'
 import { addToFavorite } from './redux/favoriteSlice';
+import './moviedetails.css'
 
 export const MovieDetails = () => {
   const { state } = useLocation()
@@ -42,7 +43,7 @@ export const MovieDetails = () => {
         </div>
       </div>
       <div className='movie-description'>
-        <img src={`${baseUrl}${movie?.poster_path}`} />
+        <img src={`${baseUrl}${movie?.poster_path}`} alt='movie poster' />
         <div className='movie-description-details'>
           <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
           <MdAddCircle className='Add-fav-details' onClick={() => dispatch(addToFavorite(movie))} size={22} />

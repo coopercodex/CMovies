@@ -1,9 +1,10 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { getAuth, signOut } from "firebase/auth";
+// import { getAuth, signOut } from "firebase/auth";
 import { selectUser } from './redux/userSlice'
 import { auth } from '../firebase';
 import { Plans } from './Plans';
+import './profile.css'
 
 export const Profile = () => {
   const user = useSelector(selectUser)

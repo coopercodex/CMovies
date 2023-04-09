@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import { useEffect } from 'react'
 import {MdAddCircle} from 'react-icons/md'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { addToFavorite } from './redux/favoriteSlice'
-
+import './searchbar.css'
 
 export const Searchbar = () => {
   const [search, setSearch] = useState('')

@@ -5,6 +5,7 @@ import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons/io'
 import { useDispatch } from 'react-redux';
 import { addToFavorite } from './redux/favoriteSlice';
 import { Link } from 'react-router-dom';
+import './rows.css'
 
 export const Rows = ({ title, getUrl, isLargeRow, rID }) => {
   const [movies, setMovies] = useState([]);

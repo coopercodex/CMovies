@@ -4,6 +4,7 @@ import SignIn from './SignIn'
 import { useRef } from 'react'
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from 'firebase/auth';
 import { auth } from '../firebase';
+import './login.css'
 
 function Login() {
   const [signIn, setSignIn] = useState(false) 

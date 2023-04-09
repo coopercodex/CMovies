@@ -1,0 +1,47 @@
+.navbar {
+    color: whitesmoke;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    padding: 11px;
+    z-index: 1;
+    transition-timing-function: ease-in-out;
+    transition: all 0.3s;
+  }
+  
+  .navbar-avatar {
+    position: fixed;
+    right: 25px;
+    width: 55px;
+    margin-top: -28px;
+    padding: 0.2rem;
+    cursor: pointer;
+  }
+  
+  .navbar-black {
+    background-color: rgba(10, 10, 10, 0.8);
+  }
+  
+  .navbar-title {
+    font-family: sans-serif;
+    padding: 0.2rem;
+    margin-left: 1.8rem;
+    background-color: rgb(77, 194, 223);
+    box-shadow: rgb(13, 13, 13);
+    border-radius: 2px;
+  }
+
+  .home-button {
+    font-size: large;
+    height: min-content;
+    color: whitesmoke;
+  }
+  
+  .home-button:hover {
+    text-decoration: none;
+    color: rgb(77, 194, 223);
+  }
+  
