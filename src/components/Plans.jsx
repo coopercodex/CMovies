@@ -1,13 +1,12 @@
-import { QuerySnapshot } from 'firebase/firestore'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import { collection, doc, setDoc, query, where, getDocs, CollectionReference, onSnapshot, getDoc, addDoc } from "firebase/firestore";
+import { collection, doc, query, where, getDocs, onSnapshot, addDoc } from "firebase/firestore";
 import { db } from '../firebase'
-import { async } from '@firebase/util';
 import { useSelector } from 'react-redux';
 import { selectUser } from './redux/userSlice';
 import { loadStripe } from '@stripe/stripe-js';
 import ReactLoading from 'react-loading';
+import './plans.css'
 
 export const Plans = () => {
   const [products, setProducts] = useState([])

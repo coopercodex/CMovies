@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import requests from '../requests';
 import { Link } from 'react-router-dom';
+import './featured.css'
 
 export const Featured = () => {
   const [movie, setMovies] = useState([]);

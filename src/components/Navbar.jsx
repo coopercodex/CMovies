@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Searchbar } from './Searchbar';
+import './navbar.css'
 
 export const Navbar = () => {
   const [show, handleShow] = useState(false);
