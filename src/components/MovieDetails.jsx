@@ -35,7 +35,7 @@ export const MovieDetails = () => {
         <div className='movie-info'>
           <div className='video-title'><Link to='/'>Home</Link> / {movie?.title}</div>
           {video?.key ? (
-            <ReactPlayer url={`https://www.youtube.com/watch?v=${video?.key}`} controls={true} width='840px' height='460px' />
+            <ReactPlayer url={`https://www.youtube.com/watch?v=${video?.key}`} controls={true} MaxWidth='840px' MaxHeight='460px' />
           ) : <>
             <ReactPlayer url='https://www.youtube.com/watch?v=JLlNvOmznXk' />
           </>
