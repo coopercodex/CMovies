@@ -44,4 +44,15 @@
     text-decoration: none;
     color: rgb(77, 194, 223);
   }
+
+  @media screen and (max-width:680px) {
+    .navbar {
+        justify-content: normal;
+        gap: .5rem;
+    }
+
+    .navbar-title {
+        margin-left: 0rem;
+    }
+  }
   

@@ -35,7 +35,7 @@ export const MovieDetails = () => {
         <div className='movie-info'>
           <div className='video-title'><Link to='/'>Home</Link> / {movie?.title}</div>
           {video?.key ? (
-            <ReactPlayer url={`https://www.youtube.com/watch?v=${video?.key}`} controls={true} MaxWidth='840px' MaxHeight='460px' />
+            <ReactPlayer className='react-player' url={`https://www.youtube.com/watch?v=${video?.key}`} controls={true} width='840px' height='460px' />
           ) : <>
             <ReactPlayer url='https://www.youtube.com/watch?v=JLlNvOmznXk' />
           </>
@@ -43,10 +43,12 @@ export const MovieDetails = () => {
         </div>
       </div>
       <div className='movie-description'>
+        <div className='movie-poster-container'>
         <img src={`${baseUrl}${movie?.poster_path}`} alt='movie poster' />
+          <MdAddCircle className='Add-fav-details' onClick={() => dispatch(addToFavorite(movie))} size={22} />
+        </div>
         <div className='movie-description-details'>
           <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
-          <MdAddCircle className='Add-fav-details' onClick={() => dispatch(addToFavorite(movie))} size={22} />
           <div className='movie-description-tag'><p style={{ wordSpacing: 6 }}><span className='hd'>HD</span> ★{movie?.vote_average.toFixed(2)} {movie?.vote_count}votes </p>
             <p>{movie?.overview}</p>
             <p style={{ wordSpacing: 20 }}>Type: {movie?.media_type || 'N/A'}</p>
