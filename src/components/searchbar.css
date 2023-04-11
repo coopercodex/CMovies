@@ -55,4 +55,10 @@
     display: flex;
     align-items: flex-start;
   }
+
+  @media screen and (max-width:680px) {
+    .searchbar {
+        display: none;
+    }
+  }
   
