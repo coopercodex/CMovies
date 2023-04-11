@@ -5,7 +5,8 @@
     /* height: 100vh; */
     color: rgb(246, 243, 243);
     background-color: rgb(13, 13, 13);
-    min-width: min-content;
+    /* min-width: min-content; */
+    min-width: 100%;
     min-height: 100vh;
   }
   
@@ -49,6 +50,7 @@
   }
   .movie-description-details p {
     margin: 5px 0px;
+    
   }
   .movie-description-tag {
     color: rgb(158, 155, 155);
