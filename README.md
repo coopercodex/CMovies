@@ -58,7 +58,7 @@ https://user-images.githubusercontent.com/105816411/203442425-393bf2bb-fccd-4fa7
 
   ## Possible Future Extensions
 
-  Some future extensions that i would like to add is an option to select genres from a drop down menu and add a details page that shows that movies trailer.
+  Some future extensions that I would like to add is an option to select genres from a drop down menu and add a details page that shows that movies trailer.
 
   ## Set Up
   1. Fork and clone this repo.
