@@ -66,4 +66,11 @@
     height: 17.5rem;
     background-image: linear-gradient(to top, rgba(13, 13, 13, 1), 65%, transparent 100%);
   }
+
+  .top-ten {
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
   
