@@ -51,8 +51,8 @@ export const MovieDetails = () => {
           <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
           <div className='movie-description-tag'><p style={{ wordSpacing: 6 }}><span className='hd'>HD</span> ★{movie?.vote_average.toFixed(2)} {movie?.vote_count}votes </p>
             <p>{movie?.overview}</p>
-            <p style={{ wordSpacing: 20 }}>Type: {movie?.media_type || 'N/A'}</p>
-            <p style={{ wordSpacing: 20 }}>Release: {movie?.release_date || 'N/A'}</p>
+            <p style={{ wordSpacing: 10 }}>Type: {movie?.media_type || 'N/A'}</p>
+            <p style={{ wordSpacing: 10 }}>Release: {movie?.release_date || 'N/A'}</p>
           </div>
         </div>
       </div>
