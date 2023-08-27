@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "comments-executor",
+    "name": "comments",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "qdya2h180f",
+    "module": "index"
+  }
+}
