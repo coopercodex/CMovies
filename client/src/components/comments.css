@@ -1,0 +1,50 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  color: rgb(246, 243, 243);
+  background-color: rgb(13, 13, 13);
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.content {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid gray;
+}
+
+.content > h4 {
+  margin-bottom: 0.5rem;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user-comments {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.comment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.comment-details > h5 {
+  color: rgb(158, 155, 155);
+}
+
+.like {
+  cursor: pointer;
+  color: rgb(158, 155, 155);
+  transition: all 0.2s ease-in-out;
+  padding-right: 5px;
+}
+
+.like:hover {
+  transform: scale(1.1);
+}

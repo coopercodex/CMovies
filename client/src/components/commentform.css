@@ -1,0 +1,37 @@
+.comment-form {
+margin-bottom: .5rem;
+}
+
+.comment-form-fields > input,
+textarea {
+  border: 0.5px solid gainsboro;
+  border-radius: 5px;
+  min-width: 90%;
+}
+
+.image-container  > button , .comment-form-actions > button {
+  font-size: small;
+  color: black;
+  /* background-color: rgb(77, 194, 223); */
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+/* .image-container  > button:hover , .comment-form-actions > button:hover {
+  font-size: small;
+  color: black;
+  background-color: rgb(77, 194, 223);
+  border-radius: 5px;
+  padding: 2px 5px;
+} */
+
+.image-input {
+  cursor: pointer;
+  min-width: 20px !important;
+}
+
+.image-container > img {
+  object-fit: contain;
+  width: 80px;
+  border-radius: 10px;
+}

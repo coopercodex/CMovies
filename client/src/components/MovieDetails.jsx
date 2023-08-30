@@ -25,11 +25,13 @@ export const MovieDetails = () => {
         setVideo(data?.results[0])
       })
   }
-  // console.log(movie.id)
+
+  useEffect(() => {
+    dispatch(addMovieId(movie))
+  }, [])
 
   useEffect(() => {
     getVideo()
-    dispatch(addMovieId(movie))
   }, [movie])
 
   return (
