@@ -2,7 +2,7 @@ const ApiBuilder = require("claudia-api-builder")
 const AWS = require("aws-sdk")
 const uuid = require("uuid")
 
-const uuid4 = uuid.v4()
+// const uuid4 = uuid.v4()
 var api = new ApiBuilder()
 var dynamoDb = new AWS.DynamoDB.DocumentClient()
 api.get("/comments", async () => {
@@ -16,11 +16,11 @@ api.get("/comments", async () => {
 
 api.post(
   "/comments",
-  (request) => {
+  async (request) => {
     var params = {
       TableName: "comments",
       Item: {
-        id: uuid4,
+        id: uuid.v4(),
         createdAt: Date.now(),
         updatedAt: Date.now(),
         movieId: request.body.movieId,
@@ -30,7 +30,8 @@ api.post(
         likes: request.body.likes,
       },
     }
-    return dynamoDb.put(params).promise()
+    const res = await dynamoDb.put(params).promise()
+    return res
   },
   { success: 201 }
 )
@@ -40,8 +41,8 @@ api.get("/comments/{id}", async (request) => {
   const params = {
     TableName: "comments",
     Key: {
-      id: id
-    }
+      id: id,
+    },
   }
   const res = await dynamoDb.get(params).promise()
   return res
@@ -59,6 +60,26 @@ api.put(
       },
     }
     await dynamoDb.put(params).promise()
+    return id
+  },
+  { success: { contentType: "text/plain" } }
+)
+
+api.patch(
+  "/comments/{id}",
+  async (request) => {
+    const id = decodeURI(request.pathParams.id)
+    const params = {
+      TableName: "comments",
+      Key: {
+        id: id,
+      },
+      UpdateExpression: "SET likes = :likes",
+      ExpressionAttributeValues: {
+        ":likes": request.body.likes,
+      },
+    }
+    await dynamoDb.update(params).promise()
     return id
   },
   { success: { contentType: "text/plain" } }

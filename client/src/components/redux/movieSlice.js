@@ -9,8 +9,7 @@ export const movieSlice = createSlice({
   initialState,
   reducers: {
     addMovieId: (state, action) => {
-    state.movie = action.payload
-     
+        state.movie = action.payload
     },
   },
 })
