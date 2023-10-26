@@ -52,9 +52,6 @@ export const Featured = () => {
         </h1>
       </div>
       <div className='fade-bottom' />
-      <div>
-        <h3 className='top-ten'>Top Ten</h3>
-      </div>
     </header>
   )
 }
