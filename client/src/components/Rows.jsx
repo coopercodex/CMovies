@@ -47,15 +47,14 @@ export const Rows = ({ title, getUrl, isLargeRow, rID }) => {
               <img
                 src={`${baseUrl}${isLargeRow ? movie?.poster_path : movie?.backdrop_path }`}
                 key={movie?.id} alt={movie?.name} />
-              <div className='row-info'>
               <Link to={`/movieDetails/${movie?.id}`} state={{movie}} >
+              <div className='row-info'>
                 <h4>{movie?.title || movie?.name || movie?.original_name}</h4><br />
-                </Link>
-                <h4>Add to List? <MdAddCircle className='Add-fav' onClick={() => dispatch(addToFavorite(movie))} /> </h4>
-                <Link to={`/movieDetails/${movie?.id}`} state={{movie}} >
+                <h4>Add to List? <MdAddCircle className='Add-fav' onClick={(e) => {dispatch(addToFavorite(movie))
+                  e.preventDefault()}} /> </h4>
                 <p >{movie?.overview}</p>
-                </Link>
               </div>
+                </Link>
             </div>
           ))}
           <IoIosArrowDropright className='slider-icon-right' onClick={handleClickRight} />
